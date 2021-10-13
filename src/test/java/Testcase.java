@@ -13,5 +13,7 @@ public class Testcase {
 		double actualDiscount = burger.calculateDiscount();
 
 		Assert.assertEquals(expectedDiscounted, actualDiscount, 1);
+
 	}
+
 }

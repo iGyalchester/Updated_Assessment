@@ -41,10 +41,7 @@ public abstract class Product{
 	public abstract double calculateDiscount();
 
 	public void printExpirationDate(Product product) {
-
-		product.setExpirationDate(expirationDate);
-
-		System.out.println("Duracell expires on: " + product.getExpirationDate());
+		System.out.println(product.getName()+ " expires on: " + product.getExpirationDate());
 	}
 
 	public static void printOrder(Product[] product){
