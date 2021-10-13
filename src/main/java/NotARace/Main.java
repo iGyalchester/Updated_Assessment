@@ -15,18 +15,23 @@ public class Main {
 		product[2] = battery;
 		product[3] = car;
 
-
 		System.out.println("=================printExpirationDate====================");
 		ExpirationDate expirationDate = new ExpirationDate("April", "20", "2022");
-		battery.setExpirationDate(expirationDate);
 
+
+		for (Product p : product) {
+			if (p instanceof Consumable) {
+				p.setExpirationDate(expirationDate);
+			}
+		}
+//		battery.setExpirationDate(expirationDate);
 		battery.printExpirationDate(battery);
 
 		System.out.println("================printOrder=====================");
 		Product.printOrder(product);
 
 		System.out.println("===============printConsumptionQty======================");
-		ArrayList<Consumable>consumables = new ArrayList<>();
+		ArrayList<Consumable> consumables = new ArrayList<>();
 
 		consumables.add(coke);
 		consumables.add(burger);
